@@ -1,0 +1,176 @@
+// Paleta de Cores Atualizada
+$cinza-escuro: #2b2b2b;
+$cinza-medio: #444;
+$cinza-claro: #ddd;
+$amarelo: #d4c759;
+$branco: #f8f9fa;
+
+// Título
+h2 {
+  text-align: center;
+  padding: 1rem;
+  font-family: Comic Sans MS;
+  color: $amarelo;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+// Formulário
+form {
+  max-width: 600px;
+  font-family: Comic Sans MS;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background: $cinza-escuro;
+  box-shadow: 0 4px 16px rgba(212, 199, 89, 0.1);
+
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: $amarelo;
+    font-size: 0.95rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.6rem 10px;
+    margin-bottom: 1rem;
+    border: 1px solid $cinza-claro;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background: #1c1c1c;
+    color: $branco;
+
+    &:focus {
+      outline: none;
+      border-color: $amarelo;
+      box-shadow: 0 0 0 2px rgba(212, 199, 89, 0.2);
+    }
+  }
+
+  button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    font-family: Comic Sans MS;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s ease;
+
+    &:nth-of-type(1) {
+      background-color: #28a745;
+      color: #fff;
+      &:hover {
+        background-color: darken(#28a745, 10%);
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-color: $amarelo;
+      color: #222;
+      &:hover {
+        background-color: darken($amarelo, 10%);
+      }
+    }
+
+    &:nth-of-type(3) {
+      background-color: #dc3545;
+      color: #fff;
+      &:hover {
+        background-color: darken(#dc3545, 10%);
+      }
+    }
+
+    &:nth-of-type(4) {
+      background-color: lighten($amarelo, 10%);
+      color: #000;
+      &:hover {
+        background-color: $amarelo;
+      }
+    }
+  }
+}
+
+// Tabela
+section {
+  max-width: 1200px;
+  font-family: Comic Sans MS;
+  margin: 10px auto;
+  padding: 1.5rem;
+  background-color: $cinza-escuro;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Comic Sans MS;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    background: #1f1f1f;
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid $cinza-claro;
+      color: $branco;
+      text-align: left;
+    }
+
+    thead {
+      background-color: $cinza-medio;
+
+      th {
+        color: $amarelo;
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr {
+        transition: background 0.2s;
+        &:hover {
+          background-color: #3a3a3a;
+        }
+      }
+
+      .btn-listar {
+        background-color: $amarelo;
+        color: #222;
+        padding: 6px 12px;
+        border-radius: 4px;
+        border: none;
+        font-size: 0.85rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($amarelo, 8%);
+        }
+      }
+    }
+  }
+}
+
+// Rodapé
+.rodape {
+  height: 8vh;
+  font-family: Comic Sans MS;
+  background: #1f1f1f;
+  border-top: 1px solid $cinza-claro;
+}
+
+// Responsividade
+@media (max-width: 800px) {
+  form, section {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+}

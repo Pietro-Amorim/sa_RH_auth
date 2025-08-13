@@ -1,0 +1,36 @@
+.container {
+  max-width: 1000px; /* Reduzir a largura máxima */
+  margin: 3rem auto; /* Aumentar o espaçamento superior */
+  padding: 1.5rem; /* Menos padding para visual mais compacto */
+  background-color: #1a1a1a; /* Fundo escuro para combinar com o tema */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(212, 199, 89, 0.2); /* Sombra suave amarela */
+  font-family: Comic Sans MS, sans-serif;
+
+  h1 {
+    color: #d4c759; /* Amarelo mostarda */
+    font-size: 2rem; /* Título um pouco menor */
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @media(max-width: 800px) {
+      font-size: 1.8rem; /* Menor ainda em telas médias */
+    }
+
+    @media(max-width: 480px) {
+      font-size: 1.6rem; /* Ajuste para telas pequenas */
+    }
+  }
+
+  p {
+    color: #ccc; /* Cinza claro para o texto */
+    font-size: 1rem; /* Fonte mais compacta */
+    line-height: 1.5; /* Menos espaçamento entre as linhas */
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media(max-width: 640px) {
+      font-size: 0.9rem; /* Tamanho ajustado em telas muito pequenas */
+    }
+  }
+}

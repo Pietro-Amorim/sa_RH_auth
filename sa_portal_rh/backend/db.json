@@ -1,0 +1,36 @@
+{
+  "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolvedor",
+      "foto": "dwqdwd",
+      "descricao": "Trabalho de full",
+      "salario": "10000"
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolvedor",
+      "foto": "",
+      "descricao": "Trabalhar de Front",
+      "salario": "1200"
+    }
+  ],
+  "curriculos": [
+    {
+      "id": "1",
+      "nome": "Pietro",
+      "idade": "18",
+      "telefone": "1234567890",
+      "email": "pietro.amorim.fernandes.2007@gmail.com",
+      "descricao": "Dev"
+    },
+    {
+      "id": "2",
+      "nome": "Bullzeira",
+      "idade": "18",
+      "telefone": "423424424343",
+      "email": "matheus@gmail.com",
+      "descricao": "Full Stack"
+    }
+  ]
+}

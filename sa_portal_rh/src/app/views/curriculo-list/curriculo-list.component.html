@@ -1,0 +1,27 @@
+<h3>Buscar Currículo por ID ou Nome</h3>
+
+<input
+  type="text"
+  [(ngModel)]="termoBusca"
+  placeholder="Digite um ID ou nome"
+/>
+<button (click)="buscar()">Buscar</button>
+
+<div *ngIf="resultados.length > 0">
+  <h4>Resultado{{ resultados.length > 1 ? 's' : '' }}:</h4>
+  <div *ngFor="let c of resultados" class="resultado">
+    <p><strong>ID:</strong> {{ c.id }}</p>
+    <p><strong>Nome:</strong> {{ c.nome }}</p>
+    <p><strong>idade:</strong> {{ c.idade }}</p>
+    <p><strong>Telefone:</strong> {{ c.telefone }}</p>
+    <p><strong>Email:</strong> {{ c.email }}</p>
+    <p><strong>Descrição:</strong> {{ c.descricao }}</p>
+
+    <hr />
+  </div>
+</div>
+
+<div *ngIf="buscou && resultados.length === 0" class="erro">
+  <p>⚠️ Nenhum currículo encontrado.</p>
+</div>
+

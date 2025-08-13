@@ -1,0 +1,14 @@
+<section class="listar-curriculos">
+  <div class="card" *ngFor="let curriculo of curriculos">
+    <div class="card-body">
+      <h5 class="card-title">Código do curriculo: {{ curriculo.id }}</h5>
+      <p class="card-text">curriculo: {{ curriculo.nome }}</p>
+      <p class="card-text">Idade: {{ curriculo.idade }}</p>
+      <p class="card-text">Telefone: {{ curriculo.telefone }}</p>
+      <p class="card-text">Email: {{ curriculo.email }}</p>
+      <p class="card-text">Descrição do curriculo: {{ curriculo.descricao }}</p>
+    </div>
+  </div>
+</section>
+
+<div class="rodape"></div>

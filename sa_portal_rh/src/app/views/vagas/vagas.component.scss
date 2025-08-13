@@ -1,0 +1,59 @@
+.listar-vagas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: calc(3 * 32rem + 3rem); // 3 cards + gaps
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: Comic Sans MS, sans-serif;
+}
+
+.listar-vagas .card {
+  background-color: #2b2b2b; /* cinza escuro suave */
+  border-radius: 6px;
+  border: 1px solid #d4c759; /* amarelo mostarda suave */
+  box-shadow: 0 4px 12px rgba(212, 199, 89, 0.3); /* sombra amarela suave */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+ width: 32rem; // aumente aqui para deixar o card mais largo
+  max-width: 95vw; // opcional, para não estourar em telas pequenas
+  margin: 0;
+  color: #d4c759; /* amarelo mostarda */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(212, 199, 89, 0.5);
+    background-color: #3a3a3a; /* fundo levemente mais claro */
+  }
+}
+
+.listar-vagas .card img {
+  width: 100%;
+  height: 160px; /* altura ajustada */
+  object-fit: cover;
+  border-bottom: 1px solid #d4c759;
+}
+
+.listar-vagas .card-body {
+  padding: 1.5rem; /* mais espaço interno */
+}
+
+.listar-vagas h5.card-title {
+  color: #d4c759;
+  font-size: 1.3rem; /* título maior para destaque */
+  line-height: 1.6; /* mais espaçamento entre linhas */
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.listar-vagas p.card-text {
+  color: #ccc; /* cinza claro para texto */
+  font-size: 1rem; /* fonte ajustada para melhorar legibilidade */
+  line-height: 1.6; /* mais espaçamento entre linhas */
+  margin-bottom: 0.6rem; /* mais espaço entre os parágrafos */
+}
+
+.listar-vagas p.card-text:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,13 @@
+.footer {
+  background-color: #343434;       /* cinza escuro */
+  color: #ffcc00;                  /* amarelo vibrante */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: Comic Sans MS, sans-serif;
+  font-size: 1.5rem;
+  border-top: 2px solid #ffcc00;  /* linha amarela opcional para destaque */
+  box-shadow: 0 -2px 10px rgba(255, 204, 0, 0.2); /* sombra sutil em amarelo */
+}
