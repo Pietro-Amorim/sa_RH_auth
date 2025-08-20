@@ -11,8 +11,9 @@ import { HomeComponent } from './views/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PainelVagasComponent } from './views/painel-vagas/painel-vagas.component';
 import { PainelCurriculosComponent } from './views/painel-curriculos/painel-curriculos.component';
-import { FormsModule } from '@angular/forms';
+
 import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.component';
+import { FormsModule } from '@angular/forms';
 // ...existing code...
 @NgModule({
   declarations: [
