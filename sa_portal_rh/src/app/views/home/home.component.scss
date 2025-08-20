@@ -1,36 +1,116 @@
+/* 🌌 Estilo global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 🧱 Container principal */
 .container {
-  max-width: 1000px; /* Reduzir a largura máxima */
-  margin: 3rem auto; /* Aumentar o espaçamento superior */
-  padding: 1.5rem; /* Menos padding para visual mais compacto */
-  background-color: #1a1a1a; /* Fundo escuro para combinar com o tema */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(212, 199, 89, 0.2); /* Sombra suave amarela */
-  font-family: Comic Sans MS, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
 
-  h1 {
-    color: #d4c759; /* Amarelo mostarda */
-    font-size: 2rem; /* Título um pouco menor */
-    margin-bottom: 1rem;
-    text-align: center;
+/* 🧩 Wrapper dos formulários */
+.forms-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    @media(max-width: 800px) {
-      font-size: 1.8rem; /* Menor ainda em telas médias */
-    }
+/* 🧊 Card individual */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(255, 255, 0, 0.15);
+  width: 320px;
+  transition: transform 0.3s ease;
+}
 
-    @media(max-width: 480px) {
-      font-size: 1.6rem; /* Ajuste para telas pequenas */
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📝 Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🏷️ Títulos */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFD700;
+}
+
+/* 🔤 Inputs e selects */
+input,
+select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #FFD700;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #fff;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+/* 🟡 Botões */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* ⚠️ Mensagens */
+.erro {
+  color: #ff5555;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sucesso {
+  color: #4caf50;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  .forms-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 
-  p {
-    color: #ccc; /* Cinza claro para o texto */
-    font-size: 1rem; /* Fonte mais compacta */
-    line-height: 1.5; /* Menos espaçamento entre as linhas */
-    text-align: center;
-    margin-bottom: 1rem;
-
-    @media(max-width: 640px) {
-      font-size: 0.9rem; /* Tamanho ajustado em telas muito pequenas */
-    }
+  .card {
+    width: 100%;
+    max-width: 320px;
   }
 }

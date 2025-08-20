@@ -1,4 +1,45 @@
 <div class="container">
-    <h1>Bem vindo ao Portal RH</h1>
-    <p>Este é o portal de recursos humanos onde você pode gerenciar suas informações pessoais, consultar benefícios e muito mais.</p>
+  <div class="forms-wrapper">
+
+    <!-- Login -->
+    <div class="card">
+      <h1>Login</h1>
+      <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" [(ngModel)]="email" required autocomplete="username" />
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" [(ngModel)]="senha" required autocomplete="current-password" />
+
+        <button type="submit" [disabled]="!loginForm.form.valid">Entrar</button>
+        <div *ngIf="erro" class="erro">{{ erro }}</div>
+      </form>
+    </div>
+
+    <!-- Cadastro -->
+    <div class="card">
+      <h2>Cadastro</h2>
+      <form (ngSubmit)="onCadastrar()" #cadastroForm="ngForm">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nomeCadastro" type="text" [(ngModel)]="nome" required />
+
+        <label for="emailCadastro">Email</label>
+        <input id="emailCadastro" name="emailCadastro" type="email" [(ngModel)]="emailCadastro" required />
+
+        <label for="senhaCadastro">Senha</label>
+        <input id="senhaCadastro" name="senhaCadastro" type="password" [(ngModel)]="senhaCadastro" required />
+
+        <label for="tipo">Tipo de Usuário</label>
+        <select id="tipo" name="tipoCadastro" [(ngModel)]="tipo" required>
+          <option value="cliente">Cliente</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <button type="submit" [disabled]="!cadastroForm.form.valid">Cadastrar</button>
+        <div *ngIf="cadastroErro" class="erro">{{ cadastroErro }}</div>
+        <div *ngIf="cadastroSucesso" class="sucesso">{{ cadastroSucesso }}</div>
+      </form>
+    </div>
+
+  </div>
 </div>
