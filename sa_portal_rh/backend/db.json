@@ -6,6 +6,13 @@
       "foto": "",
       "descricao": "Trabalhar de Front",
       "salario": "1200"
+    },
+    {
+      "id": "1",
+      "nome": "Desenvolvedor",
+      "foto": "dwqdwd",
+      "descricao": "Trabalho de full",
+      "salario": "100000"
     }
   ],
   "curriculos": [
