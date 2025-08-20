@@ -1,97 +1,128 @@
 // Cores principais
-$cinza-escuro: #2b2b2b;
-$cinza-medio: #3a3a3a;
-$cinza-claro: #ccc;
-$amarelo: #d4c759;
-$branco: #f8f9fa;
+$azul: #002D62;
+$cinza: #A4A4A4;
+$branco: #ffffff;
 
+// Fundo geral da página
+body {
+  background-color: $branco; // fundo branco puro
+  font-family: Comic Sans MS, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Títulos
 h2 {
   text-align: center;
   padding: 1rem;
-  color: $amarelo;
+  color: $azul;
   font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: 0.5px;
 }
-
+// --------------------------------------------------------
 // Formulário
 form {
   max-width: 600px;
   font-family: Comic Sans MS;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: $cinza-escuro;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba($amarelo, 0.15);
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background: $cinza; // card cinza
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
   label {
     display: block;
-    margin: 0.8rem 0 0.3rem;
-    color: $amarelo;
+    margin-bottom: 0.4rem;
+    color: $azul;
     font-size: 0.95rem;
-    font-weight: 500;
   }
 
   input {
     width: 100%;
-    padding: 0.6rem;
-    border: 1px solid $cinza-claro;
+    padding: 0.6rem 10px;
+    margin-bottom: 1rem;
+    border: 1px solid darken($cinza, 15%);
     border-radius: 4px;
     font-size: 0.95rem;
-    background-color: #1c1c1c;
-    color: $branco;
-    transition: border-color 0.3s;
+    background: $branco; // input branco
+    color: $azul;
 
     &:focus {
       outline: none;
-      border-color: $amarelo;
-      box-shadow: 0 0 0 2px rgba($amarelo, 0.2);
+      border-color: $azul;
+      box-shadow: 0 0 0 2px rgba($azul, 0.2);
     }
   }
 
   button {
-    margin-top: 1.2rem;
-    font-family: Comic Sans MS;
-    margin-right: 0.5rem;
     padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    font-weight: 600;
     border: none;
+    font-family: Comic Sans MS;
     border-radius: 4px;
     cursor: pointer;
-    color: #222;
-    background-color: $amarelo;
-    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s ease;
 
-    &:hover {
-      background-color: darken($amarelo, 10%);
+    &:nth-of-type(1) {
+      background-color: #28a745;
+      color: #fff;
+      &:hover {
+        background-color: darken(#28a745, 10%);
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-color: $azul;
+      color: $branco;
+      &:hover {
+        background-color: darken($azul, 10%);
+      }
+    }
+
+    &:nth-of-type(3) {
+      background-color: #dc3545;
+      color: #fff;
+      &:hover {
+        background-color: darken(#dc3545, 10%);
+      }
+    }
+
+    &:nth-of-type(4) {
+      background-color: lighten($cinza, 10%);
+      color: $azul;
+      &:hover {
+        background-color: $cinza;
+      }
     }
   }
 }
+// ---------------------------------------------------------------------------
 
 // Tabela
 section.listar-curriculos {
   max-width: 1200px;
-  font-family: Comic Sans MS;
   margin: 2rem auto;
   padding: 1.5rem;
-  background-color: $cinza-medio;
+  background-color: $cinza; // card cinza
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow-x: auto;
 
   .table {
     width: 100%;
     border-collapse: collapse;
-    font-family: Comic Sans MS;
     font-size: 0.95rem;
-    background-color: #1f1f1f;
+    background-color: $branco; // tabela branca dentro do card
 
     thead {
-      background-color: $cinza-escuro;
+      background-color: $azul;
 
       th {
-        color: $amarelo;
+        color: $branco;
         padding: 0.75rem;
         font-weight: 600;
         text-align: left;
@@ -100,22 +131,22 @@ section.listar-curriculos {
 
     tbody {
       tr {
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid darken($cinza, 20%);
         transition: background 0.2s ease;
 
         &:hover {
-          background-color: #333;
+          background-color: lighten($cinza, 10%);
         }
 
         td {
           padding: 0.75rem;
-          color: $branco;
+          color: $azul;
           vertical-align: middle;
         }
 
         .btn-listar {
-          background-color: $amarelo;
-          color: #222;
+          background-color: $azul;
+          color: $branco;
           border: none;
           border-radius: 4px;
           padding: 6px 12px;
@@ -124,7 +155,7 @@ section.listar-curriculos {
           transition: background 0.2s;
 
           &:hover {
-            background-color: darken($amarelo, 10%);
+            background-color: darken($azul, 10%);
           }
         }
       }
@@ -135,10 +166,13 @@ section.listar-curriculos {
 // Rodapé
 .rodape {
   height: 8vh;
-  background-color: #1f1f1f;
-  font-family: Comic Sans MS;
-  border-top: 1px solid $cinza-claro;
-  margin-top: 2rem;
+  background-color: $cinza; // card cinza
+  border-top: 1px solid darken($cinza, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $azul;
+  font-size: 1rem;
 }
 
 // Responsividade
@@ -150,10 +184,8 @@ section.listar-curriculos {
   .table {
     font-size: 0.85rem;
 
-    thead {
-      th {
-        font-size: 0.9rem;
-      }
+    thead th {
+      font-size: 0.9rem;
     }
 
     tbody td {

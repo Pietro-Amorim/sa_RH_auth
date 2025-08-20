@@ -1,16 +1,14 @@
-// Paleta de Cores Atualizada
-$cinza-escuro: #2b2b2b;
-$cinza-medio: #444;
-$cinza-claro: #ddd;
-$amarelo: #d4c759;
-$branco: #f8f9fa;
+// Paleta de Cores Aplicada
+$azul: #002D62;
+$cinza: #A4A4A4;
+$branco: #FFFFFF;
 
 // Título
 h2 {
   text-align: center;
   padding: 1rem;
   font-family: Comic Sans MS;
-  color: $amarelo;
+  color: $azul;
   font-weight: 600;
   font-size: 1.8rem;
 }
@@ -22,13 +20,13 @@ form {
   margin: 0 auto 2rem;
   padding: 1.5rem;
   border-radius: 6px;
-  background: $cinza-escuro;
-  box-shadow: 0 4px 16px rgba(212, 199, 89, 0.1);
+  background: $cinza; // card cinza
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
   label {
     display: block;
     margin-bottom: 0.4rem;
-    color: $amarelo;
+    color: $azul;
     font-size: 0.95rem;
   }
 
@@ -36,16 +34,16 @@ form {
     width: 100%;
     padding: 0.6rem 10px;
     margin-bottom: 1rem;
-    border: 1px solid $cinza-claro;
+    border: 1px solid darken($cinza, 15%);
     border-radius: 4px;
     font-size: 0.95rem;
-    background: #1c1c1c;
-    color: $branco;
+    background: $branco; // input branco
+    color: $azul;
 
     &:focus {
       outline: none;
-      border-color: $amarelo;
-      box-shadow: 0 0 0 2px rgba(212, 199, 89, 0.2);
+      border-color: $azul;
+      box-shadow: 0 0 0 2px rgba($azul, 0.2);
     }
   }
 
@@ -70,10 +68,10 @@ form {
     }
 
     &:nth-of-type(2) {
-      background-color: $amarelo;
-      color: #222;
+      background-color: $azul;
+      color: $branco;
       &:hover {
-        background-color: darken($amarelo, 10%);
+        background-color: darken($azul, 10%);
       }
     }
 
@@ -86,10 +84,10 @@ form {
     }
 
     &:nth-of-type(4) {
-      background-color: lighten($amarelo, 10%);
-      color: #000;
+      background-color: lighten($cinza, 10%);
+      color: $azul;
       &:hover {
-        background-color: $amarelo;
+        background-color: $cinza;
       }
     }
   }
@@ -101,9 +99,9 @@ section {
   font-family: Comic Sans MS;
   margin: 10px auto;
   padding: 1.5rem;
-  background-color: $cinza-escuro;
+  background-color: $cinza; // card cinza
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow-x: auto;
 
   .table {
@@ -112,20 +110,20 @@ section {
     font-family: Comic Sans MS;
     margin-top: 1rem;
     font-size: 0.95rem;
-    background: #1f1f1f;
+    background: $branco; // fundo branco da tabela
 
     th, td {
       padding: 12px;
-      border-bottom: 1px solid $cinza-claro;
-      color: $branco;
+      border-bottom: 1px solid darken($cinza, 20%);
+      color: $azul;
       text-align: left;
     }
 
     thead {
-      background-color: $cinza-medio;
+      background-color: $azul;
 
       th {
-        color: $amarelo;
+        color: $branco;
         font-weight: bold;
       }
     }
@@ -134,13 +132,13 @@ section {
       tr {
         transition: background 0.2s;
         &:hover {
-          background-color: #3a3a3a;
+          background-color: lighten($cinza, 10%);
         }
       }
 
       .btn-listar {
-        background-color: $amarelo;
-        color: #222;
+        background-color: $azul;
+        color: $branco;
         padding: 6px 12px;
         border-radius: 4px;
         border: none;
@@ -148,7 +146,7 @@ section {
         cursor: pointer;
 
         &:hover {
-          background-color: darken($amarelo, 8%);
+          background-color: darken($azul, 10%);
         }
       }
     }
@@ -159,8 +157,13 @@ section {
 .rodape {
   height: 8vh;
   font-family: Comic Sans MS;
-  background: #1f1f1f;
-  border-top: 1px solid $cinza-claro;
+  background: $cinza;
+  border-top: 1px solid darken($cinza, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $azul;
+  font-size: 1rem;
 }
 
 // Responsividade
