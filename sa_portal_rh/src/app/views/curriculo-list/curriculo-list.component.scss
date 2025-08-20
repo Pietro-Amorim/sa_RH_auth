@@ -1,80 +1,87 @@
-
 :host {
   display: block;
-  padding: 1rem 1.5rem;   /* menos padding para deixar mais compacto */
-  margin-top: 3rem;       /* barra mais perto do topo */
-  background-color: #000000;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: #A4A4A4; /* cinza de fundo */
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
-  font-size: 0.9rem;      /* texto menor */
-  font-family: Comic Sans MS, sans-serif; /* só pra garantir */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  font-size: 0.95rem;
+  font-family: Comic Sans MS, sans-serif;
+  text-align: center;
 }
-
 
 h3 {
-  font-size: 1.3rem;      /* título menor */
+  font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #fff200;
+  color: #002D62; /* azul para títulos */
 }
 
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 
 input {
   padding: 0.6rem 1rem;
-  border: 1px solid #ffcc00;
+  border: 1px solid #002D62; /* azul nas bordas */
   border-radius: 0.5rem;
   font-size: 1rem;
   width: 250px;
   max-width: 100%;
-  margin-right: 1rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #FFFFFF; /* branco no fundo */
+  color: #002D62; /* texto azul */
 
   &:focus {
     outline: none;
-    border-color: #fff200;
-    box-shadow: 0 0 0 2px #fff200;
+    border-color: #002D62;
+    box-shadow: 0 0 0 3px rgba(0, 45, 98, 0.4); /* glow azul */
   }
 }
 
 button {
   padding: 0.6rem 1.2rem;
-  background-color: #ffcc00; /* amarelo vivo */
-  color: #000000;
+  background-color: #002D62; /* azul principal */
+  color: #FFFFFF; /* texto branco */
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #e6b800; /* amarelo escuro no hover */
+    background-color: #001a36; /* azul ainda mais escuro no hover */
+    transform: scale(1.05);
   }
 }
 
 .resultado {
-  background-color: #1a1a1a;
+  background-color: #FFFFFF; /* fundo branco para contraste */
   padding: 1rem 1.5rem;
   margin-top: 1.5rem;
-  border-left: 5px solid #ffcc00;
+  border-left: 5px solid #002D62; /* detalhe azul */
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(255, 255, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 45, 98, 0.2);
 
   p {
     margin: 0.3rem 0;
     font-size: 1rem;
-    color: #fff200;
+    color: #002D62; /* texto azul */
   }
 
   hr {
     margin-top: 1rem;
     border: none;
-    border-top: 1px solid #333333;
+    border-top: 1px solid #A4A4A4; /* cinza */
   }
 }
 
 .erro {
-  margin-top: 2rem;
-  color: #ff4d4d; /* vermelho forte para erro */
+  margin-top: 1rem;
+  color: #ff4d4d;
   font-weight: bold;
   font-size: 1rem;
 }

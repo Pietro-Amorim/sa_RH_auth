@@ -3,55 +3,53 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  max-width: calc(3 * 32rem + 3rem); // 3 cards + gaps
+  max-width: 1100px; /* cabe até 3 cards lado a lado */
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: Comic Sans MS, sans-serif;
 }
 
 .listar-vagas .card {
-  background-color: #2b2b2b; /* cinza escuro suave */
+  background-color: #ffffff; /* branco */
   border-radius: 6px;
-  border: 1px solid #d4c759; /* amarelo mostarda suave */
-  box-shadow: 0 4px 12px rgba(212, 199, 89, 0.3); /* sombra amarela suave */
+  border: 1px solid #002D62; /* azul escuro */
+  box-shadow: 2px 2px 6px #aaa;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
- width: 32rem; // aumente aqui para deixar o card mais largo
-  max-width: 95vw; // opcional, para não estourar em telas pequenas
+  width: 32rem; /* largura fixa */
+  max-width: 100%; /* não estoura em telas menores */
   margin: 0;
-  color: #d4c759; /* amarelo mostarda */
+  color: #002D62;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(212, 199, 89, 0.5);
-    background-color: #3a3a3a; /* fundo levemente mais claro */
+    box-shadow: 4px 4px 10px #888;
   }
 }
 
 .listar-vagas .card img {
   width: 100%;
-  height: 160px; /* altura ajustada */
+  height: 160px;
   object-fit: cover;
-  border-bottom: 1px solid #d4c759;
+  border-bottom: 1px solid #002D62;
 }
 
 .listar-vagas .card-body {
-  padding: 1.5rem; /* mais espaço interno */
+  padding: 1.5rem;
 }
 
 .listar-vagas h5.card-title {
-  color: #d4c759;
-  font-size: 1.3rem; /* título maior para destaque */
-  line-height: 1.6; /* mais espaçamento entre linhas */
+  color: #002D62;
+  font-size: 1.3rem;
   margin-bottom: 0.6rem;
   font-weight: 600;
 }
 
 .listar-vagas p.card-text {
-  color: #ccc; /* cinza claro para texto */
-  font-size: 1rem; /* fonte ajustada para melhorar legibilidade */
-  line-height: 1.6; /* mais espaçamento entre linhas */
-  margin-bottom: 0.6rem; /* mais espaço entre os parágrafos */
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
 }
 
 .listar-vagas p.card-text:last-child {
